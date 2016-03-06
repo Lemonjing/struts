@@ -15,7 +15,7 @@
        <default-action-ref name="index" />
 		
         <global-results>
-            <result name="error">/WEB-INF/jsp/error.jsp</result>
+            <result name="error">error.jsp</result>
         </global-results>
 
         <global-exception-mappings>
@@ -26,14 +26,14 @@
             <result>default.jsp</result>
         </action>
 
-        <action name="helloworld_*" method="{1}" class="com.tinymood.action.HelloWorldAction">
-            <result name="success">success.jsp</result>
-            <result name="add">{1}.jsp</result>
-            <result name="edit">{1}.jsp</result>
+        <action name="HelloWorld_*" method="{1}" class="com.tinymood.action.HelloWorldAction">
+            <result name="success">/WEB-INF/jsp/test.jsp</result>
+            <result name="add">/WEB-INF/jsp/{1}.jsp</result>
+            <result name="edit">/WEB-INF/jsp/{1}.jsp</result>
         </action>
         
         <action name="LoginAction" method="login" class="com.tinymood.action.LoginAction">
-            <result name="success">success.jsp</result>
+            <result name="success">/WEB-INF/jsp/success.jsp</result>
         </action>
         
     </package>

@@ -8,8 +8,9 @@ public class LoginAction extends ActionSupport {
 	private User user;
 	
 	public String login() {
-		System.out.println(user.getName());
-		
+        System.out.println("=========");
+        System.out.println(user.getUsername());
+        System.out.println("=========");
 		return "success";
 	}
 
